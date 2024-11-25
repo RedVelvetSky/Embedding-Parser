@@ -1,0 +1,3 @@
+openai
+clickhouse_connect>=0.7.19
+schedule
