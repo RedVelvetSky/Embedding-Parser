@@ -34,7 +34,7 @@ client = clickhouse_connect.get_client(
     settings={'session_timeout': 300}
 )
 
-clientai = OpenAI()
+clientai = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
 def fetch_new_rows() -> List[dict]:
     query = f"""
