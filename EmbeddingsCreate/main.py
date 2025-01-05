@@ -28,8 +28,10 @@ client = clickhouse_connect.get_client(
     database=os.getenv('SLURP_DATABASE'),
     username=os.getenv('SLURP_USERNAME'),
     password=os.getenv('SLURP_PASSWORD'),
-    connect_timeout=30,
+    connect_timeout=300,
     secure=False,
+    verify=None,
+
     server_host_name=os.getenv('SLURP_HOST'),
     settings={'session_timeout': 300}
 )
